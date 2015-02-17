@@ -1,0 +1,14 @@
+link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
+script(type='text/javascript', src='/bower_components/angular/angular.min.js')
+script(type='text/javascript', src='/app/app.js')
+
+body(ng-app='app')
+    .container
+    h1 Welcome to Restaurant Finder App
+    div(ng-controller='testController')
+        .list-group
+            a.list-group-item(href='#')(ng-repeat="rest in restaurants")
+                h4.list-group-item-heading {{ rest.name }}
+                p.list-group-item-text {{ rest.description }}
+
+
