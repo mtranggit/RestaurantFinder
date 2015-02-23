@@ -2,11 +2,23 @@ link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.min.
 script(type='text/javascript', src='/bower_components/angular/angular.min.js')
 script(type='text/javascript', src='/bower_components/angular-resource/angular-resource.min.js')
 script(type='text/javascript', src='/app/app.js')
+script(type='text/javascript', src='/app/restaurants.js')
 
 body(ng-app='app')
     .container
-    h1 Welcome to Restaurant Finder App
+    
     div(ng-controller='testController')
+    
+        h1 Post a New Restaurant
+        form(ng-submit="submit()")
+            .form-group
+                input.form-control(placeholder='Restaurant Name' ng-model='name')
+            .form-group
+                input.form-control(placeholder='Restaurant Description', ng-model='description')
+            .form-group
+                button.btn.btn-primary(type='Submit') Submit
+                
+        h1 Welcome to Restaurant Finder App
         .list-group
             a.list-group-item(href='#')(ng-repeat="rest in restaurants")
                 h4.list-group-item-heading {{ rest.name }}

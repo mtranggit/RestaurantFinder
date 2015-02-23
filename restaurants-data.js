@@ -8,12 +8,13 @@ var findRestaurants = function (query) {
     return Promise.cast(Restaurant.find(query).exec());
 }
 
+var createRestaurant = Promise.promisify(Restaurant.create, Restaurant);
+
 exports.findRestaurants = findRestaurants;
 
 exports.connectDB = Promise.promisify(mongoose.connect, mongoose);
 
-
-var createRestaurant = Promise.promisify(Restaurant.create, Restaurant);
+exports.saveRestaurant = createRestaurant;
 
 exports.seedRestaurants = function () {
 
