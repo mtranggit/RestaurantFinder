@@ -30,7 +30,7 @@ exports.seedRestaurants = function () {
 var restaurants = [
                     { name: 'Steak on the Rock', description: 'Enjoy your steak cooked on the Rock to your likey', suburb: 'Canley Heights', state: 'NSW'},
                     { name: 'Phu Quoc', description: 'Best place to enjoy Com Suon and Pho', suburb: 'Cabrammatta', state: 'NSW'},
-                    { name: 'Loving Hutt', description: 'Make Peace and be an Vegan today!', suburb: 'Canley Heights', state: 'NSW'},
+                    { name: 'Loving Hutt', description: 'Make Peace and be a Vegan today!', suburb: 'Canley Heights', state: 'NSW'},
                     { name: 'Spicy Aroma', description: 'Authentic Lao Thai food', suburb: 'Canley Heights', state: 'NSW'},
                     { name: 'Huong Xua', description: 'Authentic Northern Vietnamese food', suburb: 'Canley Heights', state: 'NSW'},
                     { name: 'Ptj Kitchen', description: 'Yummy Thai Food @ Surry Hills', suburb: 'Surry Hills', state: 'VIC'}
