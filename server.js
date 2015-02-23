@@ -1,6 +1,5 @@
 var express = require("express");
-// var mongoose = require("mongoose");
-// var restaurantModel = require('./models/Restaurant');
+var restaurantModel = require('./models/Restaurant');
 var restaurantsData = require("./restaurants-data");
 
 
@@ -22,18 +21,9 @@ app.get('*', function (req, res) {
     res.render('index');
 });
 
-// mongoose.connect('mongodb://localhost/restaurantfinder');
-// mongoose.connect('mongodb://ngdev:ngdev@ds045031.mongolab.com:45031/restaurantfinder');
 
-// var con = mongoose.connection;
-
-// con.once('open', function () {
-//     console.log('connected to mongodb successfully');
-//     restaurantModel.seedRestaurants();
-// });
-
-restaurantsData.connectDB('mongodb://localhost/restaurantfinder')
-// restaurantsData.connectDB('mongodb://ngdev:ngdev@ds045031.mongolab.com:45031/restaurantfinder')
+// restaurantsData.connectDB('mongodb://localhost/restaurantfinder')
+restaurantsData.connectDB('mongodb://ngdev:ngdev@ds045031.mongolab.com:45031/restaurantfinder')
     .then(function () {
         console.log('connected to mongodb successfully');
         restaurantsData.seedRestaurants();
