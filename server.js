@@ -22,8 +22,8 @@ app.get('*', function (req, res) {
 });
 
 
- restaurantsData.connectDB('mongodb://localhost/restaurantfinder')
-//restaurantsData.connectDB('mongodb://ngdev:ngdev@ds045031.mongolab.com:45031/restaurantfinder')
+//restaurantsData.connectDB('mongodb://localhost/restaurantfinder')
+restaurantsData.connectDB('mongodb://ngdev:ngdev@ds045031.mongolab.com:45031/restaurantfinder')
     .then(function () {
         console.log('connected to mongodb successfully');
         restaurantsData.seedRestaurants();
