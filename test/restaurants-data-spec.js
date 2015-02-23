@@ -17,7 +17,7 @@ describe("Get restaurants", function () {
     var restaurants;
     
     before(function (done) {
-        restaurantsData.connectDB('mongodb://localhost/restaurantfinder')
+        restaurantsData.connectDB('mongodb://localhostssfs/restaurantfinder')
             .then(resetRestaurants)
             .then(restaurantsData.seedRestaurants)
             .then(restaurantsData.findRestaurants)
